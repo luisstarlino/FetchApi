@@ -7,5 +7,15 @@
 async function insertUsers(){
     let response = await fetch('https://jsonplaceholder.typicode.com/users');
     let dados = await response.json();
-    console.log(dados);
+    document.getElementById('table').innerHTML = "<tr><th> Name </th><th> UserName </th> <th> email </th></tr>"
+    dados.forEach(function(dado){
+        let name = dado.name;
+        let userName = dado.username;
+        let email = dado.email;
+        var tr = document.createElement('tr');
+        tr.innerHTML = "<td>"+ name + "</td>" + "<td>" + userName + "</td>" + "<td>" + email + "</td>" 
+        document.getElementById('table').append(tr)
+    })
 }
+
+
