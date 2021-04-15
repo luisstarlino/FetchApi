@@ -1,7 +1,18 @@
-window.onload = function(){
+window.onload = call();
+/*function(){
     fetch('https://dog.ceo/api/breeds/image/random')
     .then(response => response.json())
     .then(dados => putImage(dados));
+}*/
+
+function call(){
+    fetch('https://dog.ceo/api/breeds/image/random')
+    .then(response => response.json())
+    .then(dados => putImage(dados));
+}
+
+function reloading(){
+    call()
 }
 
 //JOGANDO A IMG NO CONSOLE
