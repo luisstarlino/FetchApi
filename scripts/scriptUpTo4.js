@@ -21,9 +21,10 @@ function jogarTag(dados){
     console.log(link_imagem)
 }
 
-//JOGANDO A IMAGEM NO ARQUIVO
+//JOGANDO A IMAGEM NO ARQUIVO-Italo
 function putImage(dados){
     let img =  dados.message;
+    console.log(img)
     document.getElementById('imagem').innerHTML = "<img src='"+img+"'>"
 }
 
